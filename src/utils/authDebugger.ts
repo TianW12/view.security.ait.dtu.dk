@@ -50,7 +50,7 @@ export const debugAuthenticationState = () => {
 
 export const validateRedirectURI = () => {
   const currentURL = `${window.location.protocol}//${window.location.host}`;
-  const expectedURL = 'http://localhost:3030';
+  const expectedURL = import.meta.env.VITE_MSAL_REDIRECT_URI || 'https://view.security.ait.dtu.dk';
   
   console.log('🔗 Redirect URI Validation:');
   console.log('📍 Current URL:', currentURL);
